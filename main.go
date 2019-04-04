@@ -121,7 +121,7 @@ func getBlog(filepath string) (string, string) {
 	if err != nil {
 		fmt.Println("cannot file read")
 	}
-	body := string(blackfriday.MarkdownBasic(b))
+	body := string(blackfriday.MarkdownCommon(b))
 	title := strings.Split(f.Name(), ".")[0]
 	if strings.Contains(title, "/") {
 		sp := strings.Split(title, "/")
